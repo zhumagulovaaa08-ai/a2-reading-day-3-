@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English with Mixlass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            color: #FF6600;
+            text-align: center;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #FF6600;
+            text-align: center;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .article-box {
+            background-color: #fff;
+            color: #333;
+            padding: 24px;
+            border-radius: 12px;
+            flex: 1 1 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #FF6600;
+        }
+        .article-author {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #FF6600;
+        }
+        .article-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .exercise-box {
+            background-color: #f7f7f7;
+            padding: 24px;
+            border-radius: 12px;
+            flex: 1 1 300px;
+        }
+        .exercise-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-item {
+            margin-bottom: 1rem;
+        }
+        .task-item p {
+            margin-bottom: 0.5rem;
+        }
+        .input-line {
+            display: inline-block;
+            width: 150px;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            padding: 2px 0;
+            margin: 0 5px;
+            background-color: transparent;
+        }
+        .true-false-options {
+            display: flex;
+            gap: 10px;
+        }
+        .true-false-options label {
+            cursor: pointer;
+        }
+        .true-false-options input[type="radio"] {
+            margin-right: 5px;
+        }
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: none;
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .correct-answer-text {
+            font-weight: 400;
+            color: #555;
+            margin-top: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .btn {
+            background-color: #FF6600;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e65c00;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .grid-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header">English with Mixlass</h1>
+            <p class="subtitle">LEARN. SHARE. CONNECT.</p>
+        </header>
+
+        <main class="content">
+            <div class="article-box">
+                <div class="article-title">Identical twins?</div>
+                <div class="article-author">Andy writes about life as a twin</div>
+                <div class="article-text">
+                    <p>Many brothers are very different from each other, but people think twins are exactly the same. In fact, my twin brother Sam and I are very different. It's hard to believe we come from the same family!</p>
+                    <p>Sam lives in a small village and he's an actor. He also teaches drama students at university, because he doesn't have a lot of money. My life is very different. I'm the businessman in the family. I have a small tech start-up company. I work from home, from my flat near the city centre. I think his work is crazy – and he thinks mine is!</p>
+                    <p>Our day-to-day life is very different. I get up early, usually for video calls with business partners in Asia. Sam gets up at about eleven. After that he studies Chinese for an hour. He loves languages! Sam is a vegetarian and he cooks at home for himself. I don't have time to cook, I go out a lot to local restaurants with friends. Sometimes Sam visits me in the city, and we go and listen to music somewhere. The problem is that Sam likes jazz – he plays the guitar in a jazz band – but I prefer indie concerts.</p>
+                    <p>The great thing is that Sam and I are really good friends and we often do things together. It's funny when we are out together. People see us and say, 'Wow, am I seeing double?' I think this is probably normal for all twins.</p>
+                </div>
+            </div>
+
+            <div class="exercise-box">
+                <div class="exercise-title">B Look at the photos. Which phrases (1–9) do you think go with Sam (S)? Which go with Andy (A)?</div>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <p>1. small village</p>
+                        <input type="text" class="input-line" data-answer="S">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>2. teacher</p>
+                        <input type="text" class="input-line" data-answer="S">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>3. tech start-up</p>
+                        <input type="text" class="input-line" data-answer="A">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>4. home office</p>
+                        <input type="text" class="input-line" data-answer="A">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>5. gets up early</p>
+                        <input type="text" class="input-line" data-answer="A">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>6. Chinese language</p>
+                        <input type="text" class="input-line" data-answer="S">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>7. cooks at home</p>
+                        <input type="text" class="input-line" data-answer="S">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>8. restaurants</p>
+                        <input type="text" class="input-line" data-answer="A">
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>9. jazz</p>
+                        <input type="text" class="input-line" data-answer="S">
+                        <div class="feedback"></div>
+                    </li>
+                </ul>
+                <div class="exercise-title mt-8">D Read the article again. Are the statements True (T) or False (F)?</div>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <p>1. Sam has a lot of money.</p>
+                        <div class="true-false-options" data-answer="F">
+                            <label><input type="radio" name="q1" value="T"> T</label>
+                            <label><input type="radio" name="q1" value="F"> F</label>
+                        </div>
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>2. Sam studies for one hour a day.</p>
+                        <div class="true-false-options" data-answer="T">
+                            <label><input type="radio" name="q2" value="T"> T</label>
+                            <label><input type="radio" name="q2" value="F"> F</label>
+                        </div>
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>3. Sam cooks Chinese food with chicken in it.</p>
+                        <div class="true-false-options" data-answer="F">
+                            <label><input type="radio" name="q3" value="T"> T</label>
+                            <label><input type="radio" name="q3" value="F"> F</label>
+                        </div>
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>4. Andy doesn't go out to eat alone.</p>
+                        <div class="true-false-options" data-answer="T">
+                            <label><input type="radio" name="q4" value="T"> T</label>
+                            <label><input type="radio" name="q4" value="F"> F</label>
+                        </div>
+                        <div class="feedback"></div>
+                    </li>
+                    <li class="task-item">
+                        <p>5. The brothers don't like each other.</p>
+                        <div class="true-false-options" data-answer="F">
+                            <label><input type="radio" name="q5" value="T"> T</label>
+                            <label><input type="radio" name="q5" value="F"> F</label>
+                        </div>
+                        <div class="feedback"></div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <div class="buttons">
+            <button class="btn" onclick="checkAnswers()">Проверить</button>
+            <button class="btn" onclick="resetAnswers()">Сбросить</button>
+        </div>
+    </div>
+
+    <script>
+        const explanations = {
+            'B': {
+                'S': 'В тексте говорится: "Sam lives in a small village" и "he\'s an actor. He also teaches drama students at university... Sam is a vegetarian and he cooks at home for himself. ... Sam likes jazz – he plays the guitar in a jazz band". Все эти утверждения относятся к Сэму.',
+                'A': 'В тексте говорится: "I\'m the businessman in the family. I have a small tech start-up company. I work from home... I get up early, usually for video calls... I don\'t have time to cook, I go out a lot to local restaurants... but I prefer indie concerts." Все эти утверждения относятся к Энди.'
+            },
+            'D': {
+                '1': {
+                    'F': 'Неверно. В тексте сказано: "He also teaches drama students at university, because he doesn\'t have a lot of money." Это означает, что у него нет много денег.'
+                },
+                '2': {
+                    'T': 'Верно. В тексте сказано: "After that he studies Chinese for an hour." Это подтверждает, что он занимается один час в день.'
+                },
+                '3': {
+                    'F': 'Неверно. В тексте сказано: "Sam is a vegetarian and he cooks at home for himself." Вегетарианцы не едят курицу.'
+                },
+                '4': {
+                    'T': 'Верно. В тексте сказано: "I go out a lot to local restaurants with friends." Это означает, что он ходит в рестораны с друзьями, а не один.'
+                },
+                '5': {
+                    'F': 'Неверно. В тексте сказано: "The great thing is that Sam and I are really good friends and we often do things together." Это показывает, что они хорошие друзья.'
+                }
+            }
+        };
+
+        function normalizeString(str) {
+            return str.trim().toLowerCase().replace(/[\s\.,\?!'’]/g, '');
+        }
+
+        function checkAnswers() {
+            // Check text inputs (Exercise B)
+            const textInputs = document.querySelectorAll('.exercise-box .input-line');
+            textInputs.forEach(input => {
+                const feedbackDiv = input.nextElementSibling;
+                const correctAnswer = input.dataset.answer;
+                const userAnswer = normalizeString(input.value);
+
+                feedbackDiv.style.display = 'block';
+
+                let isCorrect = false;
+                if (correctAnswer === 'S' && (userAnswer === 's' || userAnswer === 'sam')) {
+                    isCorrect = true;
+                } else if (correctAnswer === 'A' && (userAnswer === 'a' || userAnswer === 'andy')) {
+                    isCorrect = true;
+                }
+
+                if (isCorrect && userAnswer !== '') {
+                    feedbackDiv.className = 'feedback correct';
+                    feedbackDiv.textContent = 'Правильно!';
+                } else {
+                    feedbackDiv.className = 'feedback incorrect';
+                    let message = 'Неправильно. ';
+                    if (userAnswer === '') {
+                        message = 'Вы пропустили это задание. ';
+                    }
+                    message += explanations['B'][correctAnswer];
+                    feedbackDiv.textContent = message;
+                }
+            });
+
+            // Check radio buttons (Exercise D)
+            const trueFalseQuestions = document.querySelectorAll('.exercise-box .true-false-options');
+            trueFalseQuestions.forEach((question, index) => {
+                const feedbackDiv = question.nextElementSibling;
+                const correctAnswer = question.dataset.answer;
+                const selectedOption = question.querySelector('input:checked');
+                const questionNumber = index + 1;
+
+                feedbackDiv.style.display = 'block';
+
+                if (selectedOption && selectedOption.value === correctAnswer) {
+                    feedbackDiv.className = 'feedback correct';
+                    feedbackDiv.textContent = 'Правильно!';
+                } else {
+                    feedbackDiv.className = 'feedback incorrect';
+                    let message = 'Неправильно. ';
+                    if (!selectedOption) {
+                        message = 'Вы пропустили это задание. ';
+                    }
+                    message += explanations['D'][questionNumber][correctAnswer];
+                    feedbackDiv.textContent = message;
+                }
+            });
+        }
+
+        function resetAnswers() {
+            // Reset text inputs
+            const textInputs = document.querySelectorAll('.exercise-box .input-line');
+            textInputs.forEach(input => {
+                input.value = '';
+                const feedbackDiv = input.nextElementSibling;
+                feedbackDiv.style.display = 'none';
+            });
+
+            // Reset radio buttons
+            const radioButtons = document.querySelectorAll('.exercise-box input[type="radio"]');
+            radioButtons.forEach(radio => {
+                radio.checked = false;
+            });
+            const trueFalseQuestions = document.querySelectorAll('.exercise-box .true-false-options');
+            trueFalseQuestions.forEach(question => {
+                const feedbackDiv = question.nextElementSibling;
+                feedbackDiv.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
